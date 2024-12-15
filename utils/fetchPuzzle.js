@@ -117,6 +117,11 @@ function convertToMarkdown(html) {
     $(el).replaceWith(`<p>\`\`\`\n${codeContent}\n\`\`\`</p>`); // Replace with Markdown syntax
   });
 
+  $("code").each((i, el) => {
+    const codeContent = $(el).text(); // Extract the text content
+    $(el).replaceWith(`\`${codeContent}\``); // Replace with Markdown syntax
+  });
+
   // Remove the <pre> tag wrapper, if present
   $("pre").each((i, el) => {
     $(el).replaceWith($(el).html());
