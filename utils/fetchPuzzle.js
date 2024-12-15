@@ -93,7 +93,7 @@ const inputLines = fs.readFileSync(inputFilePath, "utf8").trim().split("\\n");
 
 const solver = (inputLines) => {
   // Your solution code goes here
-  return null;
+  return;
 }
 
 solver(inputLines);
